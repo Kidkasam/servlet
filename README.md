@@ -1,14 +1,14 @@
-# 🎓 Student Registration System
+# Student Registration System
 
 A simple, comprehensive Java Web Application for managing student registrations. Built with **Jakarta EE (Servlet API 5.0)**, **JSP**, **JDBC**, and **MySQL**.
 
-## 🚀 Features
+## Features
 - **Register Students**: Simple form to add Name, Email, and Year.
 - **View All Students**: Tabular view of all registered students (ID, Name, Email, Year).
 - **Validation**: Prevents empty fields and duplicate email addresses.
 - **MVC Architecture**: Clean separation of concerns (Model, View, Controller).
 
-## 🛠️ Tech Stack
+## Tech Stack
 - **Java**: JDK 17+
 - **Server**: Apache Tomcat 10+ (Jakarta EE compatible)
 - **Database**: MySQL 8.x
@@ -17,7 +17,7 @@ A simple, comprehensive Java Web Application for managing student registrations.
 
 ---
 
-## ⚙️ Prerequisites
+## Prerequisites
 Ensure you have the following installed:
 1.  **JDK 17** or higher.
 2.  **Apache Maven** (for building the project).
@@ -26,7 +26,7 @@ Ensure you have the following installed:
 
 ---
 
-## 📥 Installation & Setup
+## Installation & Setup
 
 ### 1. Database Setup
 1.  Open your MySQL client (Workbench or CLI).
@@ -58,7 +58,7 @@ mvn clean package
 
 ---
 
-## 🖥️ Usage
+## Usage
 
 Access the application in your browser:
 
@@ -70,7 +70,7 @@ Access the application in your browser:
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 ```
 servlet/
 ├── src/main/java/com/student/
@@ -79,6 +79,7 @@ servlet/
 │   └── util/            # DB Connection Helper
 ├── src/main/webapp/
 │   ├── WEB-INF/web.xml  # Deployment Descriptor
+│   ├── css/style.css    # Stylesheet
 │   ├── register.jsp     # Registration View
 │   ├── students.jsp     # List View
 │   └── index.jsp        # Redirects to register
