@@ -4,23 +4,42 @@
 
     <head>
         <title>Register Student</title>
+        <link rel="stylesheet" href="css/style.css">
     </head>
 
     <body>
-        <h2>Register Student</h2>
+        <div class="container">
+            <h2>Register Student</h2>
 
-        <div style="color: red;">
-            <% String msg=(String) request.getAttribute("message"); if (msg !=null) out.print(msg); %>
+            <% String msg=(String) request.getAttribute("message"); if (msg !=null && !msg.isEmpty()) { %>
+                <div class="message <%= msg.toLowerCase().contains(" error") ? "error" : "success" %>">
+                    <%= msg %>
+                </div>
+                <% } %>
+
+                    <form action="register" method="post">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="Unknown Student" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="student@university.edu" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="year">Year of Study</label>
+                            <input type="number" id="year" name="year" min="1" max="6" placeholder="1" required>
+                        </div>
+
+                        <button type="submit">Register Student</button>
+                    </form>
+
+                    <div class="link-container">
+                        <a href="show_all">View All Students</a>
+                    </div>
         </div>
-
-        <form action="register" method="post">
-            <p>Name: <input type="text" name="name" required></p>
-            <p>Email: <input type="email" name="email" required></p>
-            <p>Year: <input type="number" name="year" required></p>
-            <button type="submit">Register</button>
-        </form>
-
-        <p><a href="show_all">View All Students</a></p>
     </body>
 
     </html>
